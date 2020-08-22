@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rings</title>
+</head>
+<body>
+  <div class="ring"></div>
+  <div class="ring"></div>
+  <div class="ring"></div>
+</body>
+</html>
+
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.ring {
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+.ring:before {
+  content: '';
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  border: 20px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #0f5, inset 0 0 50px #0f5;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+  animation: animate 5s linear infinite;
+}
+
+.ring:nth-child(2):before {
+  animation-delay: -2.5s;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 50px #0f5, inset 0 0 50px #0f5;
+    filter: hue-rotate(0deg);
+  }
+
+  20% {
+    box-shadow: 0 0 60px #0f5, inset 0 0 60px #0f5;
+  }
+
+  40% {
+    box-shadow: 0 0 40px #0f5, inset 0 0 40px #0f5;
+  }
+
+  60% {
+    box-shadow: 0 0 80px #0f5, inset 0 0 80px #0f5;
+  }
+
+  80% {
+    box-shadow: 0 0 100px #0f5, inset 0 0 100px #0f5;
+  }
+
+  100% {
+    box-shadow: 0 0 50px #0f5, inset 0 0 50px #0f5;
+    filter: hue-rotate(360deg);
+  }
+}
+</style>
