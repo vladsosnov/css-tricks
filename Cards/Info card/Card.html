@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <a href="#" class="card__image-box image-box">
+        <img src="./images/first-card.jpg" alt="Image alt" class="image-box__image">
+      </a>
+      <div class="card__content">
+        <h2>Card one</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Tenetur vel officiis magnam adipisci quod, officia,
+          dolore ex perspiciatis omnis, et ducimus placeat!
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <a href="#" class="card__image-box image-box">
+        <img src="./images/second-card.jpg" alt="Image alt" class="image-box__image">
+      </a>
+      <div class="card__content">
+        <h2>Card two</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Tenetur vel officiis magnam adipisci quod, officia,
+          dolore ex perspiciatis omnis, et ducimus placeat!
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <a href="#" class="card__image-box image-box">
+        <img src="./images/third-card.jpg" alt="Image alt" class="image-box__image">
+      </a>
+      <div class="card__content">
+        <h2>Card three</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Tenetur vel officiis magnam adipisci quod, officia,
+          dolore ex perspiciatis omnis, et ducimus placeat!
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.container {
+  position: relative;
+  width: 75rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  max-width: 18.75rem;
+  height: 13.4rem;
+  margin: 2rem .625rem;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 .25rem 1.25rem rgba(0, 0, 0, .5);
+  transition: .2s ease-in-out;
+}
+
+.card:hover {
+  height: 22.5rem;
+}
+
+.card__image-box {
+  position: relative;
+  top: -3.75rem;
+  left: 1.25rem;
+  width: 16.25rem;
+  height: 16.25rem;
+  box-shadow: 0 .25rem 1.25rem rgba(0, 0, 0, .2);
+  z-index: 1;
+}
+
+.image-box__image {
+  max-width: 100%;
+  border-radius: .25rem;
+}
+
+.card__content {
+  position: relative;
+  margin-top: -8.75rem;
+  padding: .625rem 1rem;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s ease-in-out;
+}
+
+.card__content h2 {
+  margin-bottom: .5rem;
+}
+
+.card:hover .card__content {
+  margin-top: -2.5rem;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: .2s;
+}
+</style>
