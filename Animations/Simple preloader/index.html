@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preloader</title>
+</head>
+<body>
+  <div class="preloader">
+    <span class="preloader__letter" style="--i:1;"><i>L</i></span>
+    <span class="preloader__letter" style="--i:2;"><i>o</i></span>
+    <span class="preloader__letter" style="--i:3;"><i>a</i></span>
+    <span class="preloader__letter" style="--i:4;"><i>d</i></span>
+    <span class="preloader__letter" style="--i:5;"><i>i</i></span>
+    <span class="preloader__letter" style="--i:6;"><i>n</i></span>
+    <span class="preloader__letter" style="--i:7;"><i>g</i></span>
+    <span class="preloader__letter" style="--i:8;"><i>.</i></span>
+  </div>
+</body>
+</html>
+
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.preloader {
+  display: flex;
+  align-items: flex-end;
+  transform: translateY(-2.1rem);
+}
+
+.preloader .preloader__letter {
+  width: 1.25rem;
+  height: calc(1.25rem * var(--i));
+  margin: 0 .625rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #111;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(.25s * var(--i));
+}
+
+@keyframes animate {
+  0% {
+    background: #fff;
+    filter: blur(2px);
+    box-shadow: 0 0 10px #0f5,
+                0 0 20px #0f5,
+                0 0 40px #0f5,
+                0 0 80px #0f5,
+                0 0 120px #0f5,
+                0 0 200px #0f5,
+                0 0 300px #0f5,
+                0 0 400px #0f5;
+  }
+
+  25%, 75% {
+    background: #111;
+    filter: blur(0);
+    box-shadow: none;
+  }
+
+  100% {
+    background: #fff;
+    filter: blur(2px);
+    box-shadow: 0 0 10px #00b,
+                0 0 20px #00b,
+                0 0 40px #00b,
+                0 0 80px #00b,
+                0 0 120px #00b,
+                0 0 200px #00b,
+                0 0 300px #00b,
+                0 0 400px #00b;
+  }
+}
+
+.preloader .preloader__letter i {
+  display: block;
+  font-style: normal;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  transform: translateY(70px);
+  animation: animate2 2s linear infinite;
+  animation-delay: calc(.25s * var(--i));
+}
+
+@keyframes animate2 {
+  0% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #0f5,
+                0 0 20px #0f5,
+                0 0 40px #0f5,
+                0 0 80px #0f5,
+                0 0 120px #0f5,
+                0 0 200px #0f5,
+                0 0 300px #0f5,
+                0 0 400px #0f5;
+  }
+
+  25%, 75% {
+    color: #111;
+    filter: blur(0);
+    text-shadow: none;
+  }
+
+  100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #00b,
+                0 0 20px #00b,
+                0 0 40px #00b,
+                0 0 80px #00b,
+                0 0 120px #00b,
+                0 0 200px #00b,
+                0 0 300px #00b,
+                0 0 400px #00b;
+  }
+}
+</style>
