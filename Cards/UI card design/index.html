@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ui card design</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="circle">
+        <h2 class="circle__title">
+          01
+        </h2>
+      </div>
+      <div class="content">
+        <p class="content__subtitle">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem deleniti doloribus,
+          consequuntur dignissimos.
+        </p>
+        <a href="#" class="content__link">Read more</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="circle">
+        <h2 class="circle__title">
+          02
+        </h2>
+      </div>
+      <div class="content">
+        <p class="content__subtitle">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem deleniti doloribus,
+          consequuntur dignissimos.
+        </p>
+        <a href="#" class="content__link">Read more</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="circle">
+        <h2 class="circle__title">
+          03
+        </h2>
+      </div>
+      <div class="content">
+        <p class="content__subtitle">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem deleniti doloribus,
+          consequuntur dignissimos.
+        </p>
+        <a href="#" class="content__link">Read more</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<style>
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.container {
+  position: relative;
+  width: 75rem;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container:hover .card {
+  filter: blur(.25rem);
+  transform: scale(.9);
+  opacity: .5;
+}
+
+.container .card:hover {
+  filter: blur(0);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.card {
+  position: relative;
+  height: 23.5rem;
+  width: 17.5rem;
+  margin: 1.25rem;
+  background-color: #fff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .2);
+  transition: .5s;
+}
+
+.circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #000;
+  clip-path: circle(11.5rem at center 0);
+}
+
+.card:nth-child(1) .circle,
+.card:nth-child(1) .content a {
+  background-color: bisque;
+}
+
+.card:nth-child(2) .circle,
+.card:nth-child(2) .content a {
+  background-color: #ffc4fb;
+}
+
+.card:nth-child(3) .circle,
+.card:nth-child(3) .content a {
+  background-color: #c4c6ff;
+}
+
+.circle .circle__title {
+  padding: 1.8rem 0;
+  color: #666;
+  font-size: 4.5em;
+}
+
+.content {
+  position: absolute;
+  bottom: .625rem;
+  padding: 1.25rem; 
+  text-align: center;
+}
+
+.content .content__subtitle {
+  color: #666;
+  line-height: 1.3;
+}
+
+.content .content__link {
+  position: relative;
+  margin-top: 1.25rem;
+  padding: .625rem 1.25rem;
+  display: inline-block;
+  color: #666;
+  text-decoration: none;
+  border-radius: 2rem;
+}
+</style>
