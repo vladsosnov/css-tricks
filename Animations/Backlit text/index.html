@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backlit text</title>
+</head>
+<body>
+  <h2 class="title">
+    <span>I</span>M<span>POSSIBLE</span>
+  </h2>
+</body>
+</html>
+
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  transition: .3s ease-in;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 5;
+  cursor: pointer;
+}
+
+.title:hover,
+.title:hover span {
+  color: #fff;
+}
+
+.title span {
+  transition: .2s;
+}
+
+.title:hover,
+.title:hover span {
+  color: #fff;
+}
+
+.title:hover span:nth-child(1) {
+  margin-right: .675rem;
+}
+
+.title:hover span:nth-child(1)::after {
+  content: "'";
+}
+
+.title:hover span:nth-child(2) {
+  margin-left: 2.5rem;
+}
+</style>
