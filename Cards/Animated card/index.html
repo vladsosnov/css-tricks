@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pretty card</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card__icon">02</div>
+      <div class="card__content">
+        <h2>Card two</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Tenetur vel officiis magnam adipisci quod, officia,
+          dolore ex perspiciatis omnis, et ducimus placeat!
+        </p>
+        <a href="#">Read more</a>
+      </div>
+    </div>
+    <div class="card">
+     <div class="card__icon">01</div>
+      <div class="card__content">
+        <h2>Card one</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Tenetur vel officiis magnam adipisci quod, officia,
+          dolore ex perspiciatis omnis, et ducimus placeat!
+        </p>
+        <a href="#">Read more</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__icon">03</div>
+      <div class="card__content">
+        <h2>Card three</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Tenetur vel officiis magnam adipisci quod, officia,
+          dolore ex perspiciatis omnis, et ducimus placeat!
+        </p>
+        <a href="#">Read more</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<style>
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 20.5rem;
+  padding: 2.5rem;
+  background-color: #fff;
+  box-shadow: 0 .25rem 1rem rgba(0, 0, 0, .2);
+  border-radius: .25rem;
+  margin: 1.25rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card::before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, .2);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card:hover .card__content {
+  color: #fff;
+}
+
+.card__icon {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  transition: .8s;
+}
+
+.card:nth-child(1) .card__icon {
+  box-shadow: 0 0 0 0 #9b1542;
+  background-color: #9b1542;
+}
+
+.card:nth-child(1):hover .card__icon {
+  box-shadow: 0 0 0 400px #9b1542;
+  background-color: #9b1542;
+}
+
+.card:nth-child(2) .card__icon {
+  box-shadow: 0 0 0 0 #21b326;
+  background-color: #21b326;
+}
+
+.card:nth-child(2):hover .card__icon {
+  box-shadow: 0 0 0 400px #21b326;
+  background-color: #21b326;
+}
+
+.card:nth-child(3) .card__icon {
+  box-shadow: 0 0 0 0 #1a74bd;
+  background-color: #1a74bd;
+}
+
+.card:nth-child(3):hover .card__icon {
+  box-shadow: 0 0 0 400px #1a74bd;
+  background-color: #1a74bd;
+}
+
+.card__content {
+  position: relative;
+  z-index: 1;
+  transition: .5s;
+}
+
+.card__content h2 {
+  margin: .625rem 0;
+  padding: 0;
+  font-size: 1.25rem;
+}
+
+.card__content p {
+  margin: 0;
+  padding: 0;
+}
+
+.card__content a {
+  margin-top: 1.25rem;
+  padding: .625rem 1.25rem;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: .25rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  box-shadow: 0 2px .25rem rgba(0, 0, 0, .2);
+}
+</style>
